@@ -1,0 +1,35 @@
+<!--
+David Ruiz García
+Marzo 5 2018
+-->
+
+<html>
+<title>
+  Metodo Grafico
+</title>
+<head>
+  <script src="js/plot.js"></script>
+</head>
+
+<body>
+
+  <h1>Metodo Grafico</h1><hr><br>
+  <div id="content">
+    <canvas id="plot" width="500px" height="500px"></canvas>
+  </div>
+
+    <script>
+    var my_plot = new plot("plot", 10);
+    my_plot.restriction(1,1,"<",6)
+    my_plot.restriction(9,5,"<",45)
+    console.log(my_plot.z(8,5,"max"));
+    my_plot.int_solve();
+    /*var my_plot = new plot("plot", 10);
+    my_plot.restriction(0.3,0.1,"<",2.7);
+    my_plot.restriction(0.5,0.5,"=",6);
+    my_plot.restriction(0.6,0.4,">",6);
+    console.log(my_plot.z(8,5,"min"));*/
+    </script>
+
+</body>
+</html>
